@@ -31,13 +31,17 @@
             <button class="btn-desencriptar" onclick="desencriptador()" type="button">Desencriptar</button>
         </div>
 
-        <div class="box-result">
+        <div class="box-result" id="message">
             <h1>El resultado es encriptado es: </h1>
             <p class="result-encriptado" id="encriptado"></p>
             <h1>El resultado es desencriptado es: </h1>
             <p class="result-desencriptado" id="desencriptado"></p>
             <button class="btn-copy btn-limpiar" id="copy-button" onclick="copy()" type="button">&#128461; Copiar</button>
             <button class="btn-limpiar" onclick="limpiar()" type="button">&#128465; Clear</button>
+        </div>
+
+        <div class="box-result" id="message-start" >
+            <h1 class="title-start">No hay texto para mostrar</h1>
         </div>
 
     </main>

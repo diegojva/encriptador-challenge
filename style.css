@@ -78,12 +78,19 @@ textarea{
     resize: none;
     border-radius: 15px;
     color: #a6e1fa;
+    transition: 0.6s all;
+}
+
+textarea:hover{
+    box-shadow: 0 0 25px #a6e1fa;
+    transform: scale(1.01);
 }
 
 h1 {
     font-size: 2rem;
     font-weight: bold;
     color: #a6e1fa;
+    margin: 1rem 0;
 }
 
 .box-result{
@@ -92,11 +99,21 @@ h1 {
     margin: 0;
 }
 
+#message{
+    display: none;
+}
+
 .result-encriptado{
     background-color: #001c55;
     height: 50%;
     border-radius: 15px;
     color: #a6e1fa;
+    transition: 0.6s all;
+}
+
+.result-encriptado:hover {
+    box-shadow: 0 0 25px #a6e1fa;
+    transform: scale(1.01);
 }
 
 .result-desencriptado{
@@ -104,6 +121,12 @@ h1 {
     height: 50%;
     border-radius: 15px;
     color: #a6e1fa;
+    transition: 0.6s all;
+}
+
+.result-desencriptado:hover {
+    box-shadow: 0 0 25px #a6e1fa;
+    transform: scale(1.01);
 }
 
 .btn-limpiar{
@@ -121,6 +144,14 @@ h1 {
 .btn-limpiar:hover{
     background-color:  #A6E1FA;
     color:  #0A2472;
+}
+
+.title-start{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #a6e1fa;
+    text-align: center;
+    margin: 1.5rem 0;
 }
 
 footer {

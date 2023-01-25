@@ -1,26 +1,39 @@
-var encryptedText = '';
-
+var encryptedText =  '';
+var descriptadoText = '';
+var inputText = '';
+let isValid = true;
 
 function encriptador(){
-    var inputText = document.getElementById("texto").value;
-    // reemplazar las letras "e", "i", "a", "o" y "u" por las "llaves" de encriptación correspondientes
-    encryptedText = inputText.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
-    // mostrar el texto encriptado en un elemento HTML
-    document.getElementById("encriptado").innerHTML = encryptedText;
+    validInputText();
+    if(isValid){
+      inputText = document.getElementById("texto").value;
+      // reemplazar las letras "e", "i", "a", "o" y "u" por las "llaves" de encriptación correspondientes
+      encryptedText = inputText.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+      // mostrar el texto encriptado en un elemento HTML
+      document.getElementById("encriptado").innerHTML = encryptedText;
+      showMessage();
+    }
 }
 
 function desencriptador(){
-    var inputText = document.getElementById("texto").value;
-    // reemplazar las letras "e", "i", "a", "o" y "u" por las "llaves" de encriptación correspondientes
-    var descriptadoText = inputText.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
-    // mostrar el texto encriptado en un elemento HTML
-    document.getElementById("desencriptado").innerHTML = descriptadoText;
+    validInputText();
+    if(isValid){
+      inputText = document.getElementById("texto").value;
+      // reemplazar las letras "e", "i", "a", "o" y "u" por las "llaves" de encriptación correspondientes
+      descriptadoText = inputText.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+      // mostrar el texto encriptado en un elemento HTML
+      document.getElementById("desencriptado").innerHTML = descriptadoText;
+      showMessage();
+    }
 }
 
 function limpiar(){
     document.getElementById("texto").value = "";
     document.getElementById("encriptado").innerHTML = "";
     document.getElementById("desencriptado").innerHTML = "";
+    inputText = null;
+
+    showMessage();
 }
 
 function copy() {
@@ -42,8 +55,27 @@ function copy() {
   limpiar();
 }
   
+function showMessage(){
+  if(inputText !=null ){
+    document.getElementById("message").style.display = "block";
+    document.getElementById("message-start").style.display = "none";
+  }
+
+  if(inputText === null || encriptador === ''){
+    document.getElementById("message").style.display = "none";
+    document.getElementById("message-start").style.display = "block";
+  }
+}
   
-  
+function validInputText() {
+  let text = document.getElementById("texto").value;
+  if (text === null || text === "") {
+    alert("No has ingresado texto");
+    isValid = false;
+  }else{
+    isValid = true;
+  }
+}
 
 
 
