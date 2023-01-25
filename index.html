@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+ 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Sofia+Sans:wght@300;600&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&family=Rubik:wght@400;600&family=Sofia+Sans:wght@300;600&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,900;1,300&display=swap" rel="stylesheet">
+    <title>Encriptador Alura</title>
+</head>
+<body>
+
+    <header>
+        <img src="img/logo2.jpg" class="logo">
+    </header>
+
+    <main>
+        <div class="box-text">
+            <textarea cols="50" rows="10" id="texto"  placeholder="Ingresa el texto"></textarea>
+            <small >Solo letras minusculas y sin acentos</small>
+            <button class="btn-encriptar" onclick="encriptador()" type="button">Encriptar</button>
+            <button class="btn-desencriptar" onclick="desencriptador()" type="button">Desencriptar</button>
+        </div>
+
+        <div class="box-result">
+            <h1>El resultado es encriptado es: </h1>
+            <p class="result-encriptado" id="encriptado"></p>
+            <h1>El resultado es desencriptado es: </h1>
+            <p class="result-desencriptado" id="desencriptado"></p>
+            <button class="btn-copy btn-limpiar" id="copy-button" onclick="copy()" type="button">&#128461; Copiar</button>
+            <button class="btn-limpiar" onclick="limpiar()" type="button">&#128465; Clear</button>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>Hecho con &#10084; por Diego Vergara - Alura Latam</p>
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background-color: #00072D;
+}
+
+header {
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+    padding: 1rem 0 0 5rem;
+    border-radius: 15px;
+}
+
+main {
+    display: flex;
+    
+}
+
+small{
+    display: block;
+    color: azure;
+}
+
+small::before{
+    content: "⚠️";
+}
+
+.box-text {
+    width: 50%;
+    padding: 1rem 5rem;
+}
+
+.btn-encriptar{
+    background-color: #0e6ba8;
+    border-radius: 15px;
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a6e1fa;
+    cursor: pointer;
+    transition: 0.6s all;
+    border: none;
+    margin: 1.25rem 0;
+}
+
+.btn-encriptar:hover{
+    background-color:  #A6E1FA;
+    color:  #0A2472;
+}
+
+.btn-desencriptar{
+    background-color: #0e6ba8;
+    border-radius: 15px;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a6e1fa;
+    transition: 0.6s all;
+    cursor: pointer;
+    margin: 1.25rem 0;
+}
+
+.btn-desencriptar:hover{
+    background-color:  #A6E1FA;
+    color:  #0A2472;
+}
+
+textarea{
+    border: none;
+    background-color: #001c55;
+    font-size: 1.25rem;
+    width: 100%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+    border-radius: 15px;
+    color: #a6e1fa;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a6e1fa;
+}
+
+.box-result{
+    width: 50%;
+    padding: 0 5rem;
+    margin: 0;
+}
+
+.result-encriptado{
+    background-color: #001c55;
+    height: 50%;
+    border-radius: 15px;
+    color: #a6e1fa;
+}
+
+.result-desencriptado{
+    background-color: #001c55;
+    height: 50%;
+    border-radius: 15px;
+    color: #a6e1fa;
+}
+
+.btn-limpiar{
+    margin: 1.25rem 0;
+    background-color: #0e6ba8;
+    border-radius: 15px;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a6e1fa;
+    transition: 0.6s all;
+    cursor: pointer;
+}
+
+.btn-limpiar:hover{
+    background-color:  #A6E1FA;
+    color:  #0A2472;
+}
+
+footer {
+    width: 100%;
+    background-color: #0A2472;
+    padding: 1rem 0;
+    text-align: center;
+    color: #a6e1fa;
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 980px){
+
+    header{
+        text-align: center;
+    }
+
+    .logo {
+        padding: 0;
+        margin: 0.5rem 0;
+    }
+
+    main{
+        display: block;
+        margin: 0;
+    }
+
+    .box-text{
+        width: 75%;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 15px;
+    }
+
+    .box-result{
+        width: 75%;
+        text-align: center;
+    }
+
+
+    .btn-encriptar{
+        padding: 0.5rem;
+    }
+
+    .btn-desencriptar{
+
+        padding: 0.5rem;
+    }
+
+
+    .result-encriptado{
+        padding: 1.5rem;
+        width: auto;
+
+    }
+    
+    .result-desencriptado{
+        padding: 1.5rem;
+    }
+
+    .btn-limpiar{
+        padding: 0.5rem;
+
+    }
+
+}
